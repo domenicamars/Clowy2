@@ -27,7 +27,7 @@ public class RecolectarLlave : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) 
     {
         // Verificar si el jugador entra en el área del objeto
         if (other.CompareTag("Player"))
