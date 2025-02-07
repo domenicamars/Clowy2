@@ -25,6 +25,7 @@ public class LadderClimb : MonoBehaviour
         {
             Debug.LogError("No se encontró SceneTransition en la escena. Asegúrate de que haya un objeto con ese script.");
         }
+        playerController.enabled=true;
     }
 
     private void Update()
@@ -79,6 +80,7 @@ public class LadderClimb : MonoBehaviour
         if (sceneTransition != null)
         {
             sceneTransition.ChangeScene(nextSceneName); // Usar SceneTransition para hacer el fade y cambiar la escena
+        ExitLadder();  
         }
         else
         {

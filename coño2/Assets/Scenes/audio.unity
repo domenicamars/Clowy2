@@ -471,8 +471,10 @@ MonoBehaviour:
   m_text: entrada de audio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1077,8 +1079,10 @@ MonoBehaviour:
   m_text: MICROFONO USB
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1448,8 +1452,10 @@ MonoBehaviour:
   m_text: ALTAVOCES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -3037,8 +3043,10 @@ MonoBehaviour:
   m_text: volumen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -3676,8 +3684,10 @@ MonoBehaviour:
   m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -3829,8 +3839,10 @@ MonoBehaviour:
   m_text: 00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4335,8 +4347,10 @@ MonoBehaviour:
   m_text: sensibilidad del microfono
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -4597,8 +4611,10 @@ MonoBehaviour:
   m_text: salida de audio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
-  m_fontSharedMaterials: []
+  m_sharedMaterial: {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff,
+    type: 2}
+  m_fontSharedMaterials:
+  - {fileID: 4794395613212941202, guid: 2d0fa2f40f9202440932af2392efb3ff, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
