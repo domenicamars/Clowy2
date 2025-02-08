@@ -1010,9 +1010,9 @@ Transform:
   m_GameObject: {fileID: 81845541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 325.07, y: 0, z: 629.39}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 325.07, y: -0.03, z: 629.39}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1031,7 +1031,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1840,9 +1840,9 @@ Transform:
   m_GameObject: {fileID: 169916762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 272.53, y: 0, z: 601.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 272.53, y: -0.03, z: 601.61}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1861,7 +1861,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2206,9 +2206,9 @@ Transform:
   m_GameObject: {fileID: 193285990}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 298.37, y: 0, z: 635.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 298.37, y: -0.03, z: 635.07}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2227,7 +2227,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4005,9 +4005,9 @@ Transform:
   m_GameObject: {fileID: 315176884}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 298.41, y: 0, z: 626.58}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 298.41, y: -0.03, z: 626.58}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4026,7 +4026,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5837,9 +5837,9 @@ Transform:
   m_GameObject: {fileID: 512846948}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 326.59, y: 0, z: 583.97}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 326.59, y: -0.03, z: 583.97}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5858,7 +5858,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11575,9 +11575,9 @@ Transform:
   m_GameObject: {fileID: 1070530223}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 305.8, y: 0, z: 579.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 305.8, y: -0.03, z: 579.7}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11596,7 +11596,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -12867,9 +12867,9 @@ Transform:
   m_GameObject: {fileID: 1170118640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 329.39, y: 0, z: 607.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 329.39, y: -0.03, z: 607.65}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12888,7 +12888,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -17139,7 +17139,7 @@ GameObject:
   - component: {fileID: 1477805887}
   - component: {fileID: 1477805886}
   - component: {fileID: 1477805885}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Terrain (plane)
   m_TagString: suelo
   m_Icon: {fileID: 0}
@@ -17258,9 +17258,9 @@ Transform:
   m_GameObject: {fileID: 1479751068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 287.68, y: 0, z: 614.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 287.68, y: -0.03, z: 614.11}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17279,7 +17279,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -24922,7 +24922,7 @@ PrefabInstance:
     - target: {fileID: -1968182297585072013, guid: 0a6d938596840ed4abd91e9ad3a92c7f,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1968182297585072013, guid: 0a6d938596840ed4abd91e9ad3a92c7f,
         type: 3}
@@ -30089,9 +30089,9 @@ Transform:
   m_GameObject: {fileID: 2108460836}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 287.17, y: 0, z: 583.32}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 287.17, y: -0.03, z: 583.32}
+  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1477805887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30110,7 +30110,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
