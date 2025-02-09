@@ -612,15 +612,11 @@ PrefabInstance:
       addedObject: {fileID: 1806983632}
     - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1806983633}
-    - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      insertIndex: 4
+      insertIndex: 3
       addedObject: {fileID: 1806983628}
     - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
-      insertIndex: 5
+      insertIndex: 4
       addedObject: {fileID: 1806983631}
     - targetCorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
@@ -2609,20 +2605,9 @@ MonoBehaviour:
   enemy: {fileID: 0}
   micSensitivity: 1
   micThreshold: 0.1
---- !u!114 &1806983633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806983621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 285bfdbda8c067c4fa4670df2080ca02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  chaseDistance: 10
+  noiseBarImage: {fileID: 1898797676}
+  decreaseAmount: 5
+  decreaseInterval: 2
 --- !u!54 &1806983639
 Rigidbody:
   m_ObjectHideFlags: 0
