@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
-public class KeyManager : MonoBehaviour
+public class CoinManager : MonoBehaviour
 {
-    public static KeyManager Instance;
+    public static CoinManager Instance;
      public TMP_Text  coinText;
     public int coinCount = 0;
     public int coinsToActivate = 10; // Número de monedas necesarias para activar el objeto

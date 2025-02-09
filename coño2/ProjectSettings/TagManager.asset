@@ -9,6 +9,8 @@ TagManager:
   - Ladder
   - LadderTop
   - Inventario
+  - Enemy
+  - Obstacle
   layers:
   - Default
   - TransparentFX
