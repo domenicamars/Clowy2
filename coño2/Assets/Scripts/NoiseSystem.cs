@@ -1,6 +1,6 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI; // Necesario para trabajar con UI
-using System.Collections; // Para usar corutinas
+using UnityEngine.UI; // Para trabajar con la barra de UI
 
 public class NoiseSystem : MonoBehaviour
 {
@@ -13,15 +13,15 @@ public class NoiseSystem : MonoBehaviour
     // Variables del micrófono
     private AudioClip micClip;
     private string micDevice;
-    public float micSensitivity = 5f; // Ajusta la sensibilidad del micrófono
-    public float micThreshold = 0.1f; // Nivel mínimo de ruido detectable
+    public float micSensitivity = 5f; // Sensibilidad del micrófono
+    public float micThreshold = 0.1f; // Umbral de ruido
 
-    // Referencia a la imagen que será usada como barra de progreso
-    public Image noiseBarImage;  // Arrastra aquí la imagen que será la barra
+    // Referencia a la barra de ruido
+    public Image noiseBarImage;  // La barra de ruido que vamos a actualizar
 
-    // Parámetros para la reducción de ruido
-    public float decreaseAmount = 5f; // Cantidad que disminuirá el ruido
-    public float decreaseInterval = 2f; // Intervalo en segundos para disminuir el ruido
+    // Reducción del ruido con el tiempo
+    public float decreaseAmount = 5f; // Qué tanto disminuirá el ruido
+    public float decreaseInterval = 2f; // Intervalo de tiempo para disminuir
 
     private void Start()
     {
@@ -59,14 +59,13 @@ public class NoiseSystem : MonoBehaviour
         // Actualizar la imagen de la barra de ruido
         if (noiseBarImage != null)
         {
-            // Actualizar la cantidad de llenado de la imagen según el ruido
-            noiseBarImage.fillAmount = noiseLevel / maxNoise; // Esto llena la barra según el nivel de ruido
+            noiseBarImage.fillAmount = noiseLevel / maxNoise; // Llena la barra de ruido
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Si el objeto con el que colisiona tiene el tag "Obstacle", agrega ruido
+        // Verificar si la colisión fue con un objeto de tipo "Obstacle"
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             AddNoise();
@@ -78,9 +77,9 @@ public class NoiseSystem : MonoBehaviour
         noiseLevel += noiseIncrease;
         noiseLevel = Mathf.Clamp(noiseLevel, 0, maxNoise);
 
+        // Si el nivel de ruido alcanza el máximo, activar al enemigo
         if (noiseLevel >= maxNoise)
         {
-            // Si el enemigo no está asignado, buscarlo por su tag
             if (enemy == null)
             {
                 enemy = GameObject.FindGameObjectWithTag("Enemy")?.GetComponent<EnemyAI>();
@@ -114,19 +113,17 @@ public class NoiseSystem : MonoBehaviour
         return sum / data.Length * micSensitivity;
     }
 
-    // Corutina para reducir el ruido con el tiempo
+    // Corutina para disminuir el ruido con el tiempo
     private IEnumerator DecreaseNoiseOverTime()
     {
         while (true)
         {
-            // Esperar el intervalo de tiempo
             yield return new WaitForSeconds(decreaseInterval);
 
-            // Reducir el nivel de ruido gradualmente
+            // Reducir el ruido gradualmente
             noiseLevel -= decreaseAmount;
             noiseLevel = Mathf.Clamp(noiseLevel, 0, maxNoise);
 
-            // Actualizar la barra
             if (noiseBarImage != null)
             {
                 noiseBarImage.fillAmount = noiseLevel / maxNoise;
