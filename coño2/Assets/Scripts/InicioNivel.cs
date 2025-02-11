@@ -9,7 +9,7 @@ public class InicioNivel : MonoBehaviour{
 
 private void Awake(){
         jugador = GameObject.FindGameObjectWithTag("Player");
-        //CargarPos();
+        CargarPos();
     }
  
 private void CargarPos(){
