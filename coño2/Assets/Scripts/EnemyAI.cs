@@ -3,13 +3,16 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform player; // El jugador al que el enemigo perseguirá
+    private Transform player; // El jugador al que el enemigo perseguirá
     private NavMeshAgent agent; // Para mover al enemigo
     private Animator animator; // Para animaciones
     private bool isChasing = false; // Estado de persecución
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player").transform;
+
+
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
