@@ -3711,6 +3711,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 309682459}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &310119918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 310119920}
+  - component: {fileID: 310119919}
+  m_Layer: 0
+  m_Name: ControladorDatos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &310119919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310119918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3fc40d9a31dc744807365ad3258fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 0}
+  archivoDeGuardado: "C:\\Users\\domea\\OneDrive\\Documentos\\GitHub\\Clowy2\\co\xF1o2\\Assets"
+  datosJuego:
+    posicion: {x: 0, y: 0, z: 0}
+    ruido: 0
+--- !u!4 &310119920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310119918}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.44989, y: -4383.917, z: 7.6510363}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312302134 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1083448237397772336, guid: 0a6d938596840ed4abd91e9ad3a92c7f,
@@ -33053,3 +33102,4 @@ SceneRoots:
   - {fileID: 153956739}
   - {fileID: 1225973929}
   - {fileID: 716517897}
+  - {fileID: 310119920}
