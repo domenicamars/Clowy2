@@ -11,6 +11,8 @@ TagManager:
   - Inventario
   - Enemy
   - Obstacle
+  - Linterna
+  - Nota
   layers:
   - Default
   - TransparentFX
