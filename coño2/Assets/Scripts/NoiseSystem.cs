@@ -7,7 +7,7 @@ public class NoiseSystem : MonoBehaviour
     public float noiseLevel = 0f;
     public float maxNoise = 100f;
     public float noiseIncrease = 10f;
-    public float runningNoiseIncreaseRate = 25f; // Aumento ligeramente más rápido
+    public float runningNoiseIncreaseRate = 25f;
     public bool isRunning = false;
     public EnemyAI enemy;
 
@@ -40,7 +40,7 @@ public class NoiseSystem : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isRunning = true;
-            AddNoise(runningNoiseIncreaseRate * Time.deltaTime); // Aumenta progresivamente
+            AddNoise(runningNoiseIncreaseRate * Time.deltaTime);
         }
         else
         {
@@ -59,10 +59,26 @@ public class NoiseSystem : MonoBehaviour
         }
     }
 
+    // 🛠️ DETECTAR COLISIÓN CON OBSTÁCULOS
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Colisión detectada con: " + collision.gameObject.name);
+
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            Debug.Log("El jugador chocó con un obstáculo.");
+            AddNoise(noiseIncrease);
+        }
+    }
+
+    // Si no quieres usar Rigidbody en el jugador, usa este método y marca los obstáculos como "Is Trigger"
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Trigger activado por: " + other.gameObject.name);
+
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log("El jugador tocó un obstáculo.");
             AddNoise(noiseIncrease);
         }
     }
