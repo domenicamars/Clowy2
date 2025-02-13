@@ -1,83 +1,77 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI; // Para trabajar con la barra de UI
+using UnityEngine.UI;
 
 public class NoiseSystem : MonoBehaviour
 {
-    public float noiseLevel = 0f;  
-    public float maxNoise = 100f;  
-    public float noiseIncrease = 10f;  
-    public bool isRunning = false;  
-    public EnemyAI enemy;  
+    public float noiseLevel = 0f;
+    public float maxNoise = 100f;
+    public float noiseIncrease = 10f;
+    public float runningNoiseIncreaseRate = 25f; // Aumento ligeramente más rápido
+    public bool isRunning = false;
+    public EnemyAI enemy;
 
     // Variables del micrófono
     private AudioClip micClip;
     private string micDevice;
-    public float micSensitivity = 5f; // Sensibilidad del micrófono
-    public float micThreshold = 0.1f; // Umbral de ruido
+    public float micSensitivity = 5f;
+    public float micThreshold = 0.1f;
 
     // Referencia a la barra de ruido
-    public Image noiseBarImage;  // La barra de ruido que vamos a actualizar
+    public Image noiseBarImage;
 
     // Reducción del ruido con el tiempo
-    public float decreaseAmount = 5f; // Qué tanto disminuirá el ruido
-    public float decreaseInterval = 2f; // Intervalo de tiempo para disminuir
+    public float decreaseAmount = 5f;
+    public float decreaseInterval = 2f;
 
     private void Start()
     {
-        // Iniciar el micrófono
         if (Microphone.devices.Length > 0)
         {
-            micDevice = Microphone.devices[0]; // Usa el primer micrófono disponible
+            micDevice = Microphone.devices[0];
             micClip = Microphone.Start(micDevice, true, 1, 44100);
         }
 
-        // Iniciar la corutina para disminuir el ruido con el tiempo
         StartCoroutine(DecreaseNoiseOverTime());
     }
 
     private void Update()
     {
-        // Detectar si el jugador está corriendo
         if (Input.GetKey(KeyCode.LeftShift))
         {
             isRunning = true;
-            AddNoise();
+            AddNoise(runningNoiseIncreaseRate * Time.deltaTime); // Aumenta progresivamente
         }
         else
         {
             isRunning = false;
         }
 
-        // Detectar ruido del micrófono
         float micLoudness = GetMicrophoneLoudness();
         if (micLoudness > micThreshold)
         {
-            AddNoise();
+            AddNoise(noiseIncrease);
         }
 
-        // Actualizar la imagen de la barra de ruido
         if (noiseBarImage != null)
         {
-            noiseBarImage.fillAmount = noiseLevel / maxNoise; // Llena la barra de ruido
+            noiseBarImage.fillAmount = noiseLevel / maxNoise;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Verificar si la colisión fue con un objeto de tipo "Obstacle"
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            AddNoise();
+            AddNoise(noiseIncrease);
         }
     }
 
-    private void AddNoise()
+    private void AddNoise(float amount)
     {
-        noiseLevel += noiseIncrease;
+        noiseLevel += amount;
         noiseLevel = Mathf.Clamp(noiseLevel, 0, maxNoise);
 
-        // Si el nivel de ruido alcanza el máximo, activar al enemigo
         if (noiseLevel >= maxNoise)
         {
             if (enemy == null)
@@ -113,14 +107,12 @@ public class NoiseSystem : MonoBehaviour
         return sum / data.Length * micSensitivity;
     }
 
-    // Corutina para disminuir el ruido con el tiempo
     private IEnumerator DecreaseNoiseOverTime()
     {
         while (true)
         {
             yield return new WaitForSeconds(decreaseInterval);
 
-            // Reducir el ruido gradualmente
             noiseLevel -= decreaseAmount;
             noiseLevel = Mathf.Clamp(noiseLevel, 0, maxNoise);
 

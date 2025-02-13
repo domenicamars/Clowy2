@@ -85,7 +85,7 @@ public class Linterna : MonoBehaviour
     {
         while (estaEncendida && energia > 0)
         {
-            yield return new WaitForSeconds(50f);
+            yield return new WaitForSeconds(30f);
             energia -= 5f;
             if (energia < 0) energia = 0;
 
