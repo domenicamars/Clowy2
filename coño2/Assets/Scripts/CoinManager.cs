@@ -36,7 +36,7 @@ public class CoinManager : MonoBehaviour
 
     private void UpdateCoinText()
     {
-        coinText.text = "Coins: " + coinCount;
+        coinText.text = "Llaves: " + coinCount;
     }
 
     private void CheckCoins()
