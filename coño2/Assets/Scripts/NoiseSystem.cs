@@ -14,7 +14,7 @@ public class NoiseSystem : MonoBehaviour
     // Variables del micrófono
     private AudioClip micClip;
     private string micDevice;
-    public float micSensitivity = 5f;
+    public float micSensitivity = 2f;
     public float micThreshold = 0.1f;
 
     // Referencia a la barra de ruido
