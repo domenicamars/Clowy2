@@ -22793,7 +22793,33 @@ PrefabInstance:
         type: 3}
       insertIndex: 1
       addedObject: {fileID: 1014055939}
+    - targetCorrespondingSourceObject: {fileID: 3199109649220184621, guid: dda08ca5c38c4114aa127cc2d92bee95,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 8167408557555420480}
   m_SourcePrefab: {fileID: 100100000, guid: dda08ca5c38c4114aa127cc2d92bee95, type: 3}
+--- !u!95 &8167408557555420479 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8200625281376365293, guid: dda08ca5c38c4114aa127cc2d92bee95,
+    type: 3}
+  m_PrefabInstance: {fileID: 8167408557555420478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8167408557555420480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014055938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc41a6d0be328614d9b87920a38d5346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  cameraName: MainCamera
+  detectionRange: 5
+  animator: {fileID: 8167408557555420479}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
