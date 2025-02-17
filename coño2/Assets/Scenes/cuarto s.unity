@@ -2822,6 +2822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869122eaa52d9cf4994a4353d392573d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastSceneName: 2cinematica
 --- !u!4 &1493516528
 Transform:
   m_ObjectHideFlags: 0
@@ -2963,7 +2964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1606545443
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2981,8 +2982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 284.1761, y: 65.06479}
-  m_SizeDelta: {x: -638.9626, y: -242.5214}
+  m_AnchoredPosition: {x: 285.2735, y: 153.02434}
+  m_SizeDelta: {x: -641.1573, y: -418.4405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606545444
 MonoBehaviour:

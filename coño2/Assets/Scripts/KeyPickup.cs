@@ -16,14 +16,16 @@ public class KeyPickup : MonoBehaviour
         if (other.CompareTag("Player") && !mostrandoNota)
         {
             MostrarPrimeraNota();
-            gameObject.SetActive(false);  // Desactiva la llave una vez recogida
+            
         }
     }
 
     private void Update()
     {
+        print("entra"+ Input.GetKeyDown(KeyCode.Space));
         if (mostrandoNota && Input.GetKeyDown(KeyCode.Space))
         {
+            
             SiguienteNota();  // Cambia a la siguiente imagen al presionar ESPACIO
         }
     }
@@ -58,14 +60,17 @@ public class KeyPickup : MonoBehaviour
             if (objetoAparecer != null)
             {
                 objetoAparecer.SetActive(true);
+                gameObject.SetActive(false);  // Desactiva la llave una vez recogida
             }
         }
     }
 
     void BloquearMovimiento(bool estado)
     {
+       
         if (player != null)
         {
+             print("entra2");
             player.GetComponent<CharacterController>().enabled = !estado;
         }
     }
