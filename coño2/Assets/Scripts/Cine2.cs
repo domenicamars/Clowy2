@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Cine2 : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
+    private bool videoStarted = false; // Variable para detectar si el video ya empezó
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class Cine2 : MonoBehaviour
         if (videoPlayer != null)
         {
             videoPlayer.loopPointReached += EndVideo;
+            videoPlayer.started += OnVideoStarted; // Evento cuando el video comienza
             Debug.Log("Evento loopPointReached asignado correctamente.");
         }
         else
@@ -26,7 +28,7 @@ public class Cine2 : MonoBehaviour
 
     void Update()
     {
-        if (!videoPlayer.isPlaying) // Si el video termina, cambia de escena
+        if (videoStarted && !videoPlayer.isPlaying) // Solo cambia de escena si el video ya empezó y terminó
         {
             Debug.Log("El video terminó (comprobado con isPlaying). Cambiando de escena...");
             SceneManager.LoadScene("pantalla inicial");
@@ -43,5 +45,10 @@ public class Cine2 : MonoBehaviour
     {
         Debug.Log("El video terminó, intentando cambiar de escena...");
         SceneManager.LoadScene("pantalla inicial");
+    }
+
+    void OnVideoStarted(VideoPlayer vp)
+    {
+        videoStarted = true; // Ahora sabemos que el video ha comenzado correctamente
     }
 }

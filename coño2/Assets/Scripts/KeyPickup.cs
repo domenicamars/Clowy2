@@ -3,55 +3,70 @@ using UnityEngine.UI;
 
 public class KeyPickup : MonoBehaviour
 {
-    public GameObject objetoAparecer;  // El objeto que aparecerá al recoger la llave
-    public GameObject panelNotas;      // Panel UI donde se mostrarán las notas
-    public Image imagenNota;           // Imagen que cambiará para mostrar las notas
+    public Image displayImage;  // UI Image en el Canvas
+    public Sprite[] notes;      // Array de imágenes de las notas
+    public GameObject objetoAparecer;  // Objeto que aparecerá (puerta, llave, etc.)
+    public GameObject player; // Referencia al jugador para desactivar su movimiento
 
-    public Sprite[] notas;             // Array de imágenes de las notas
-    private int notaActual = 0;        // Controlador para cambiar de nota
-    private bool mostrandoNota = false;
-
-    private void Start()
-    {
-        // Al inicio, desactiva el panel de notas
-        panelNotas.SetActive(false);
-    }
+    private int index = 0;      // Índice de la imagen actual
+    private bool mostrandoNota = false; // Controla si una nota está en pantalla
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !mostrandoNota)
         {
-            // Activa el objeto que aparece al recoger la llave
-            if (objetoAparecer != null) objetoAparecer.SetActive(true);
-            
-            // Muestra la primera nota
-            panelNotas.SetActive(true);
-            imagenNota.sprite = notas[0];
-            mostrandoNota = true;
-            
-            // Destruye la llave
-            Destroy(gameObject); 
+            MostrarPrimeraNota();
+            gameObject.SetActive(false);  // Desactiva la llave una vez recogida
         }
     }
 
     private void Update()
     {
-        // Si se está mostrando la nota y el jugador presiona espacio
         if (mostrandoNota && Input.GetKeyDown(KeyCode.Space))
         {
-            notaActual++;  // Avanza a la siguiente nota
+            SiguienteNota();  // Cambia a la siguiente imagen al presionar ESPACIO
+        }
+    }
 
-            if (notaActual < notas.Length)
+    void MostrarPrimeraNota()
+    {
+        if (notes.Length > 0)  // Asegura que hay notas para mostrar
+        {
+            index = 0;
+            displayImage.sprite = notes[index];  // Asigna la primera imagen
+            displayImage.gameObject.SetActive(true);  // Muestra la imagen
+            mostrandoNota = true;
+            BloquearMovimiento(true);  // Bloquea el movimiento del jugador
+        }
+    }
+
+    void SiguienteNota()
+    {
+        index++;
+
+        if (index < notes.Length)  // Si hay más notas, cambia la imagen
+        {
+            displayImage.sprite = notes[index];
+        }
+        else
+        {
+            displayImage.gameObject.SetActive(false);  // Oculta la imagen cuando se acaban las notas
+            mostrandoNota = false;
+            BloquearMovimiento(false);  // Desbloquea el movimiento del jugador
+
+            // Activa el objeto cuando terminan las notas
+            if (objetoAparecer != null)
             {
-                // Cambia la imagen de la nota
-                imagenNota.sprite = notas[notaActual];
+                objetoAparecer.SetActive(true);
             }
-            else
-            {
-                // Cuando no hay más notas, oculta el panel
-                panelNotas.SetActive(false);
-                mostrandoNota = false;
-            }
+        }
+    }
+
+    void BloquearMovimiento(bool estado)
+    {
+        if (player != null)
+        {
+            player.GetComponent<CharacterController>().enabled = !estado;
         }
     }
 }
