@@ -6,8 +6,9 @@ public class NoiseSystem : MonoBehaviour
 {
     public float noiseLevel = 0f;
     public float maxNoise = 100f;
-    public float noiseIncrease = 10f;
-    public float runningNoiseIncreaseRate = 25f;
+    public float noiseIncrease = 20f;
+    public float runningNoiseIncreaseRate = 40f;
+    public float jumpNoiseIncrease = 20f; // Ruido generado al saltar
     public bool isRunning = false;
     public EnemyAI enemy;
 
@@ -45,6 +46,11 @@ public class NoiseSystem : MonoBehaviour
         else
         {
             isRunning = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            AddNoise(jumpNoiseIncrease); // Aumenta el ruido al saltar
         }
 
         float micLoudness = GetMicrophoneLoudness();
