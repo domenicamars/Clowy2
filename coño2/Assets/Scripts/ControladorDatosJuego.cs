@@ -11,28 +11,9 @@ public class ControladorDatosJuego : MonoBehaviour
 
     private void Awake()
     {
-        archivoDeGuardado = Path.Combine(Application.persistentDataPath, "datosJuego.json");
-
-        if (jugador == null)
-        {
-            jugador = GameObject.FindGameObjectWithTag("Player");
-        }
-
-        if (jugador == null)
-        {
-            Debug.LogError("❌ No se encontró el jugador. Asegúrate de que tiene la etiqueta 'Player'.");
-            return;
-        }
-
-        if (!File.Exists(archivoDeGuardado))
-        {
-            Debug.Log("📂 No se encontró un archivo de guardado, creando uno nuevo...");
-            GuardarDatos();
-        }
-        else
-        {
-            CargarDatos();
-        }
+        archivoDeGuardado = Application.persistentDataPath + "/datosJuego.json";
+        jugador = GameObject.FindGameObjectWithTag("Player");
+        CargarDatos();
     }
 
     private void Update()
@@ -54,50 +35,31 @@ public class ControladorDatosJuego : MonoBehaviour
             string contenido = File.ReadAllText(archivoDeGuardado);
             datosJuego = JsonUtility.FromJson<DatosJuego>(contenido);
 
-            Debug.Log("📥 Cargando datos...");
-            Debug.Log("📌 Posición guardada: " + datosJuego.posicion);
-            Debug.Log("🔊 Ruido guardado: " + datosJuego.ruido);
+            Debug.Log("Posición del jugador cargada: " + datosJuego.posicion);
 
-            // Desactivar CharacterController antes de mover al jugador
             CharacterController cc = jugador.GetComponent<CharacterController>();
-            if (cc != null) cc.enabled = false;
-
+            Destroy(cc);
             jugador.transform.position = datosJuego.posicion;
+            jugador.AddComponent<CharacterController>();
 
-            if (cc != null) cc.enabled = true; // Reactivar CharacterController
-
-            // Cargar el ruido en el NoiseSystem
-            NoiseSystem noiseSystem = jugador.GetComponent<NoiseSystem>();
-            if (noiseSystem != null)
-            {
-                noiseSystem.noiseLevel = datosJuego.ruido;
-                Debug.Log("🔊 Ruido cargado en NoiseSystem: " + noiseSystem.noiseLevel);
-            }
+            Physics.SyncTransforms(); // Para actualizar la física correctamente
         }
         else
         {
-            Debug.LogWarning("⚠️ El archivo de guardado no existe.");
+            Debug.Log("El archivo no existe, no se pueden cargar datos.");
         }
     }
 
     private void GuardarDatos()
     {
-        NoiseSystem noiseSystem = jugador.GetComponent<NoiseSystem>();
-
-        if (noiseSystem == null)
-        {
-            Debug.LogError("❌ No se encontró el NoiseSystem en el jugador.");
-            return;
-        }
-
         DatosJuego nuevosDatos = new DatosJuego()
         {
-            posicion = jugador.transform.position,
-            ruido = noiseSystem.noiseLevel
+            posicion = jugador.transform.position
         };
 
-        string cadenaJSON = JsonUtility.ToJson(nuevosDatos, true);
+        string cadenaJSON = JsonUtility.ToJson(nuevosDatos);
         File.WriteAllText(archivoDeGuardado, cadenaJSON);
-        Debug.Log("✅ Archivo guardado: " + cadenaJSON);
+        Debug.Log("Posición del jugador guardada.");
     }
 }
+
