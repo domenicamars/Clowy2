@@ -11,19 +11,26 @@ public class KeyPickup : MonoBehaviour
     private int index = 0;      // Índice de la imagen actual
     private bool mostrandoNota = false; // Controla si una nota está en pantalla
 
-    private void OnTriggerEnter(Collider other)
+private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Player") && !mostrandoNota)
     {
-        if (other.CompareTag("Player") && !mostrandoNota)
-        {
-            MostrarPrimeraNota();
-            
-        }
+        MostrarPrimeraNota();
+        
+        // Desactiva la colisión temporalmente para que no siga incrementando el contador
+        GetComponent<Collider>().enabled = false;
+        
+        // Opcionalmente, haz invisible el objeto si lo prefieres
+        GetComponent<Renderer>().enabled = false;
     }
+}
+
+
 
     private void Update()
     {
-        print("entra"+ Input.GetKeyDown(KeyCode.O));
-        if (mostrandoNota && Input.GetKeyDown(KeyCode.O))
+        print("entra"+ Input.GetKeyDown(KeyCode.E));
+        if (mostrandoNota && Input.GetKeyDown(KeyCode.E))
         {
              
             SiguienteNota();  // Cambia a la siguiente imagen al presionar ESPACIO
