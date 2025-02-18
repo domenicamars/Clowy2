@@ -1,12 +1,18 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartGame : MonoBehaviour
+public class RestarGame : MonoBehaviour
 {
-    // M�todo para reiniciar el juego
-    public void Restart()
+    public void IrACuartoS()
     {
-        // Recargar la escena actual
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // 📌 Si el objeto Persistente existe, elimínalo antes de recargar
+        PersistentObject persistente = FindObjectOfType<PersistentObject>();
+        if (persistente != null)
+        {
+            Destroy(persistente.gameObject);
+        }
+
+        // 📌 Recarga la escena "cuarto s" como si fuera la primera vez
+        SceneManager.LoadScene("cuarto s");
     }
 }

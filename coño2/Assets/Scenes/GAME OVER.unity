@@ -387,8 +387,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1623010956}
-        m_TargetAssemblyTypeName: RestartGame, Assembly-CSharp
-        m_MethodName: Restart
+        m_TargetAssemblyTypeName: RestarGame, Assembly-CSharp
+        m_MethodName: IrACuartoS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
