@@ -8,7 +8,7 @@ public class NoiseSystem : MonoBehaviour
     public float maxNoise = 100f;
     public float noiseIncrease = 20f;
     public float runningNoiseIncreaseRate = 40f;
-    public float jumpNoiseIncrease = 20f; // Ruido generado al saltar
+    public float jumpNoiseIncrease = 15f; // Ruido generado al saltar
     public bool isRunning = false;
     public EnemyAI enemy;
 

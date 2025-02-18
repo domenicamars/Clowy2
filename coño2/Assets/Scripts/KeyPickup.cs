@@ -22,10 +22,10 @@ public class KeyPickup : MonoBehaviour
 
     private void Update()
     {
-        print("entra"+ Input.GetKeyDown(KeyCode.Space));
-        if (mostrandoNota && Input.GetKeyDown(KeyCode.Space))
+        print("entra"+ Input.GetKeyDown(KeyCode.O));
+        if (mostrandoNota && Input.GetKeyDown(KeyCode.O))
         {
-            
+             
             SiguienteNota();  // Cambia a la siguiente imagen al presionar ESPACIO
         }
     }

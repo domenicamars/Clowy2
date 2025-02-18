@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System;
+
 public class CoinManager : MonoBehaviour
 {
     public static CoinManager Instance;
-     public TMP_Text  coinText;
+    public TMP_Text coinText;
     public int coinCount = 0;
-    public int coinsToActivate = 10; // Número de monedas necesarias para activar el objeto
-    public GameObject objectToActivate; // El objeto que se activará al recolectar las monedas necesarias
+    public int coinsToActivate = 2; // Límite de monedas en 2
+    public GameObject objectToActivate; // Objeto a activar al recolectar 2 monedas
 
     private void Awake()
     {
@@ -29,9 +29,12 @@ public class CoinManager : MonoBehaviour
 
     public void AddCoin()
     {
-        coinCount++;
-        UpdateCoinText();
-        CheckCoins();
+        if (coinCount < 2) // Evita que pase de 2
+        {
+            coinCount++;
+            UpdateCoinText();
+            CheckCoins();
+        }
     }
 
     private void UpdateCoinText()
@@ -46,4 +49,4 @@ public class CoinManager : MonoBehaviour
             objectToActivate.SetActive(true);
         }
     }
-} 
+}

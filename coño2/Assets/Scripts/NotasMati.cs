@@ -16,7 +16,7 @@ public class NotasMati : MonoBehaviour
             ShowFirstImage();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isActive)
+        if (Input.GetKeyDown(KeyCode.E) && isActive)
         {
             NextImage();
         }
@@ -50,7 +50,7 @@ public class NotasMati : MonoBehaviour
         {
             isPlayerNearby = true;
         }
-    }
+    } 
 
     private void OnTriggerExit(Collider other)
     {
